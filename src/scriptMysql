@@ -1,0 +1,74 @@
+CREATE database gem
+
+CREATE table alunos (
+	id int not null auto_increment,
+	nome varchar(100),
+	instrumento varchar(100),
+	primary key (id)
+)
+
+create table frequencia (
+	id int not null auto_increment,
+	nome varchar(100),
+	frequencia_em_porcentagem varchar(100),
+	primary key (id)
+	
+)
+
+
+create table instrumentos (
+	id int not null auto_increment,
+	nome varchar(100),
+	naipe varchar(100),
+	tom varchar(100),
+	primary key (id)
+)
+
+create table instrutores (
+	id int not null auto_increment,
+	nome varchar(100),
+	codigo int,
+	hora_de_entrada time,
+	hora_de_saida time,
+	total_de_alunos_passados int,
+	primary key (id)
+)
+
+INSERT INTO frequencia (nome, frequencia_em_porcentagem) values
+('Samuel', '80%'),
+('William', '50%'),
+('Nicolas', '10%')
+
+
+INSERT INTO alunos (nome, instrumento) values 
+('Samuel Almeida', 'Violino'),
+('Nicolas Ferreira', 'Viola'),
+('William', 'Cello')
+
+
+INSERT INTO instrumentos (nome, naipe, tom) values 
+('Violino', 'corda', 'do'),
+('Trombone', 'metais', 'sib'),
+('clarinete', 'madeira', 'sib'),
+('Sax tenor', 'madeira', 'mib')
+
+INSERT into instrutores (nome, codigo, hora_de_entrada, hora_de_saida, total_de_Alunos_passados) values
+('Yago Emanuel', 91, "14:55", "15:55", 1),
+('Danilo Ruan', 92, "15:05", "15:50", 2)
+
+SELECT * from alunos a 
+
+SELECT * from frequencia f
+
+SELECT * from instrumentos i
+
+SELECT * from instrutores i 
+
+
+
+
+
+
+
+
+
