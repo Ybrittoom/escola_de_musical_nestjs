@@ -11,6 +11,12 @@ export class Instrutores {
   @Column()
   codigo: number;
 
+  @Column({ type: 'time' })
+  hora_de_entrada: string;
+
+  @Column({ type: 'time' })
+  hora_de_saida: string;
+
   @Column()
-  hora_de_entrada: Date;
+  total_de_Alunos_passados: number;
 }
